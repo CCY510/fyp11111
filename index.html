@@ -3,64 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>醫療導航</title>
+    <title>醫療導航 Pro - 跨區強化版</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="app-container">
-        <aside class="sidebar">
-            <header>
-                <h1>🏥 醫療導航 Pro</h1>
-                <div id="status" class="status-bar">正在初始化...</div>
-            </header>
+<div class="app-container">
+    <aside class="sidebar">
+        <header>
+            <h1>🏥 醫療導航 Pro</h1>
+            <div id="status" class="status-bar">正在初始化...</div>
+        </header>
 
-            <div class="search-section">
-                <div class="input-group">
-                    <label>📍 起點 (定位 / 點擊地圖 / 輸入)</label>
-                    <div class="row">
-                        <input id="start-input" type="text" placeholder="輸入起點...">
-                        <button id="gps-btn" title="GPS 定位">🎯</button>
-                    </div>
-                </div>
-                <div class="input-group" style="margin-top: 10px;">
-                    <label>🏁 手動輸入終點 (或點擊列表導航)</label>
-                    <input id="dest-input" type="text" placeholder="輸入特定醫院或地址...">
+        <div class="search-section">
+            <div class="input-group">
+                <label>📍 起點 (定位 / 點擊地圖 / 輸入)</label>
+                <div class="row">
+                    <input id="start-input" type="text" placeholder="輸入起點...">
+                    <button id="gps-btn" title="GPS 定位">🎯</button>
                 </div>
             </div>
-
-            <div class="filter-section">
-                <p class="label-sm">1. 選擇區域 (支援自動切換)</p>
-                <div class="btn-grid" id="region-btns">
-                    <button class="active" data-region="kowloon">九龍</button>
-                    <button data-region="hong kong island">港島</button>
-                    <button data-region="new territories">新界</button>
-                </div>
-                <p class="label-sm">2. 設施類型</p>
-                <div class="btn-grid" id="type-btns">
-                    <button class="active" data-type="all">全部</button>
-                    <button data-type="hospital">醫院</button>
-                    <button data-type="clinic">診所</button>
-                    <button data-type="private">私家</button>
-                    <button data-type="ae">急症</button>
-                </div>
-                <p class="label-sm">3. 交通方式</p>
-                <div class="btn-grid" id="mode-btns">
-                    <button class="active" data-mode="DRIVING">🚗 行車</button>
-                    <button data-mode="TRANSIT">🚌 交通</button>
-                    <button data-mode="WALKING">🚶 步行</button>
-                </div>
+            <div class="input-group" style="margin-top: 10px;">
+                <label>🏁 手動輸入終點 (或點擊列表導航)</label>
+                <input id="dest-input" type="text" placeholder="輸入特定醫院或地址...">
             </div>
+        </div>
 
-            <div class="list-container">
-                <p class="label-sm">搜尋結果 (依距離排序)</p>
-                <ul id="place-list"></ul>
+        <div class="filter-section">
+            <p class="label-sm">1. 選擇區域 (支援自動切換)</p>
+            <div class="btn-grid" id="region-btns">
+                <button class="active" data-region="kowloon">九龍</button>
+                <button data-region="hong kong island">港島</button>
+                <button data-region="new territories">新界</button>
             </div>
-        </aside>
+            <p class="label-sm">2. 設施類型</p>
+            <div class="btn-grid" id="type-btns">
+                <button class="active" data-type="all">全部</button>
+                <button data-type="hospital">醫院</button>
+                <button data-type="clinic">診所</button>
+                <button data-type="ae">急症</button>
+            </div>
+            <p class="label-sm">3. 交通方式</p>
+            <div class="btn-grid" id="mode-btns">
+                <button class="active" data-mode="DRIVING">🚗 行車</button>
+                <button data-mode="TRANSIT">🚌 交通</button>
+                <button data-mode="WALKING">🚶 步行</button>
+            </div>
+        </div>
 
-        <main id="map-canvas"></main>
-    </div>
+        <div class="list-container">
+            <p class="label-sm">搜尋結果 (依距離排序)</p>
+            <ul id="place-list"></ul>
+        </div>
+    </aside>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3wos45LJzjaFK1p9qTZzFsbHgThnCxck&libraries=places,geometry&language=zh-HK&region=HK"></script>
-    <script src="script.js"></script>
+    <main id="map-canvas"></main>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places,geometry&language=zh-HK&region=HK"></script>
+<script src="script.js"></script>
 </body>
 </html>

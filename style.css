@@ -19,7 +19,7 @@ header h1 { margin: 0; font-size: 1.2rem; }
 .row { display: flex; gap: 8px; }
 
 input { flex: 1; padding: 10px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; outline: none; }
-#gps-btn { padding: 0 12px; background: #f1f5f9; border: 1px solid var(--border); border-radius: 8px; cursor: pointer; }
+#gps-btn { padding: 0 12px; background: #f1f5f9; border: 1px solid var(--border); border-radius: 8px; cursor: pointer; font-size: 18px; }
 
 .btn-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); gap: 6px; }
 .btn-grid button { padding: 8px 4px; font-size: 12px; cursor: pointer; border: 1px solid var(--border); background: #fff; border-radius: 6px; }
@@ -37,7 +37,6 @@ input { flex: 1; padding: 10px; border: 1px solid var(--border); border-radius: 
 .place-name { font-weight: bold; font-size: 14px; color: #1e293b; display: block; margin-bottom: 4px; }
 .place-meta { font-size: 12px; color: #64748b; }
 
-/* 導航按鈕群組 */
 .nav-button-group { display: flex; gap: 6px; }
 .mini-nav-btn {
     padding: 6px 10px; border: none; border-radius: 6px;
@@ -48,4 +47,4 @@ input { flex: 1; padding: 10px; border: 1px solid var(--border); border-radius: 
 .mini-nav-btn:hover { opacity: 0.8; }
 
 #map-canvas { flex: 1; height: 100%; }
-.info-btn { background: var(--blue); color: white; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; }
+.info-btn { background: var(--blue); color: white; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; margin-top: 5px; }
